@@ -27,7 +27,7 @@ public class Destination {
         this.destinationName = destinationName;
         this.hikingRoute = hikingRoute;
         this.hikingDistance = hikingDistance;
-    }
+    } // End of method
 
     // Getter ----------------------------
     public HikingDifficulty getHikingDifficulty() {
@@ -54,6 +54,10 @@ public class Destination {
         this.hikingRoute = hikingRoute;
     } // End of method
     public void setHikingDistance(double hikingDistance) {
-        this.hikingDistance = hikingDistance;
+        if (hikingDistance > 0) {
+            this.hikingDistance = hikingDistance;
+        } else {
+            this.hikingDistance = 0;
+        } // End of if - else statement
     } // End of method
 }

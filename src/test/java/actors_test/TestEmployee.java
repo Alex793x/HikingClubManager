@@ -1,4 +1,4 @@
-package actors_Test;
+package actors_test;
 
 import actors.Employee;
 import static org.junit.jupiter.api.Assertions.*;
