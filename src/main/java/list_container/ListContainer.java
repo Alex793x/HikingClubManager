@@ -12,6 +12,9 @@ import java.util.LinkedHashSet;
 public class ListContainer {
 
     // Attributes -------------------------
+    public record AssociationContainer<Employee, Membership, Person>
+            (Employee employee, Membership membership, Person person) {
+    }
     static final ListContainer SingletonListContainer = new ListContainer();
     LinkedHashMap<Employee, Person> employeeArrayList;
     LinkedHashMap<Membership, Person> membershipArrayList;
