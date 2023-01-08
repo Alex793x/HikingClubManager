@@ -22,8 +22,11 @@ public class Person {
     private char gender;
 
     // Constructor -------------------------
-    public Person() {
-
+    public Person(String name, LocalDate dateOfBirth, char gender) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        setAgeGroup();
     } // End of method
 
     // Getter ------------------------------
@@ -52,8 +55,8 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     } // End of method
 
-    public void setAgeGroup() {
-        int period = Period.between(LocalDate.now(), dateOfBirth).getYears();
+    private void setAgeGroup() {
+        int period = Period.between(dateOfBirth, LocalDate.now()).getYears();
 
         if (period < 18) {
             ageGroup = AgeGroup.JUNIOR;

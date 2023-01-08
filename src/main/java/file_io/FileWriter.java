@@ -1,4 +1,4 @@
-package file_management;
+package file_io;
 
 public class FileWriter {
 }
