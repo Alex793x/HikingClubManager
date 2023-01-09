@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
+
 public class TestDestination {
     Destination.HikingDifficulty testHikingDifficulty = Destination.HikingDifficulty.BEGINNER;
     String testDestinationName = "test";
@@ -23,7 +24,7 @@ public class TestDestination {
         assertNull(testDestination.getHikingDifficulty());
         testDestination.setHikingDifficulty(hikingDifficulty);
         assertNotNull(testDestination.getHikingDifficulty());
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource(strings = {"Mols Bjerge National Park", "Rold Skov", "Grib Skov", "Rebild Bakker"})
@@ -32,7 +33,7 @@ public class TestDestination {
         assertEquals(testDestination.getDestinationName(), "test");
         testDestination.setDestinationName(destinationNames);
         assertNotSame("test", testDestination.getDestinationName());
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource(strings = {"Hærvejen", "Gendarmstien", "Øhavsstien", "Sjællandsleden", "Bornholms kyststi"})
@@ -41,7 +42,7 @@ public class TestDestination {
         assertEquals(testDestination.getHikingRoute(), "test");
         testDestination.setHikingRoute(hikingRoutes);
         assertNotSame("test", testDestination.getHikingRoute());
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource(doubles = {280.0, 84.0, 220.0, 400.0, 115.0, 1.0})
@@ -51,6 +52,6 @@ public class TestDestination {
         testDestination.setHikingDistance(hikingDistance);
         assertNotSame(0.0, testDestination.getHikingDistance());
         assertNotSame(5.0, testDestination.getHikingDistance());
-    }
+    } // End of test method
 
 }

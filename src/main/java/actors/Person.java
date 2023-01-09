@@ -17,6 +17,7 @@ public class Person {
 
     // Attributes --------------------------
     private String name;
+    private String phoneNumber;
     private LocalDate dateOfBirth;
     private AgeGroup ageGroup;
     private char gender;
@@ -32,6 +33,9 @@ public class Person {
     // Getter ------------------------------
     public String getName() {
         return name;
+    } // End of method
+    public String getPhoneNumber() {
+        return phoneNumber;
     } // End of method
 
     public LocalDate getDateOfBirth() {
@@ -49,6 +53,10 @@ public class Person {
     // Setter ------------------------------
     public void setName(String name) {
         this.name = name;
+    } // End of method
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     } // End of method
 
     public void setDateOfBirth(LocalDate dateOfBirth) {

@@ -9,7 +9,7 @@ public class Employee {
     // Attributes (Enum) --------------------------
     public enum Employment {
         ADMIN,
-        CHAIRMAN,
+        ADMINISTRATOR,
         ECONOMY_MANAGEMENT,
         GUIDE,
     }

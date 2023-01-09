@@ -26,7 +26,7 @@ public class TestPerson {
         Person person = new Person(names, testDateOfBirth, testGender);
 //        System.out.println(names); ---- > Test output of names
         assertTrue(person.getName().length() > 0);
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource(strings = {"Henrik", "James", "Marry", "a"})
@@ -35,7 +35,7 @@ public class TestPerson {
         testPerson.setName(names);
 //        System.out.println(names); ---- > Test output of names
         assertTrue(testPerson.getName().length() > 0);
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource( strings= {"1993-02-03", "1991-10-04", "2022-12-19", "2022-08-09"})
@@ -44,7 +44,7 @@ public class TestPerson {
         Person person = new Person(testName, LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("yyyy-MM-dd")), testGender);
 //        System.out.println(person.getDateOfBirth().getYear()); ----> test output of dateOfBirth
         assertTrue(person.getDateOfBirth().isAfter(LocalDate.of(1990, 1 ,1)));
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource( strings= {"1993-02-03", "1991-10-04", "2022-12-19", "2022-08-09"})
@@ -52,13 +52,13 @@ public class TestPerson {
     public void testSetPersonDateOfBirth(String dateOfBirth) {
         testPerson.setDateOfBirth(LocalDate.parse(dateOfBirth, DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         assertTrue(testPerson.getDateOfBirth().isAfter(LocalDate.of(1990, 1 ,1)));
-    }
+    } // End of test method
 
     @Test
     @DisplayName("Test Person AgeGroup")
     public void testPersonAgeGroup() {
         assertEquals(testPerson.getAgeGroup(), Person.AgeGroup.ADULT);
-    }
+    } // End of test method
 
     @ParameterizedTest
     @EnumSource(value = Person.AgeGroup.class)
@@ -66,7 +66,7 @@ public class TestPerson {
     public void testPersonAgeGroupTypes(Person.AgeGroup ageGroup) {
 //        System.out.println(ageGroup); -----> test output of ageGroup
         assertNotNull(ageGroup);
-    }
+    } // End of test method
 
     @ParameterizedTest
     @ValueSource(chars = {'a', 'b', 'c', 'd'})
@@ -75,6 +75,6 @@ public class TestPerson {
         Person person = new Person(testName, testDateOfBirth, gender);
 //        System.out.println(gender); -----> test output of gender
         assertNotEquals('\u0000', person.getGender()); // '\u0000' is null of char
-    }
+    } // End of test method
 
 }
